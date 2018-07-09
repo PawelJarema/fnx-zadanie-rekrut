@@ -1,0 +1,29 @@
+form(action='/send' method='post')
+	div.col-1
+		label= content.form.name
+		input(placeholder="Wpisz swoje dane...")
+
+	div.col-1
+		label= content.form.dept
+		div.select
+			select
+				option= 'Wybierz dział...'
+				option= '...'
+				option= '...'
+			span.select-value(aria-hidden="true")
+
+	div.col-1
+		label= content.form.copy
+		
+		label
+			span.checkbox
+				input(type="checkbox")
+				span.checkbox-value(aria-hidden="true")
+				span.label= content.accept
+
+	div.col-2
+		label= content.form.text
+		textarea(placeholder="Wprowadź treść...")
+
+	div.col-1
+		button.button(type="submit")= content.form.send

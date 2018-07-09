@@ -1,0 +1,56 @@
+html
+	head
+		style
+			include ../css/styles.css
+
+		include links.pug
+
+		title= content.site
+
+	body
+		header
+			div.logo
+				a(href=routes.root)
+					img(src='views/assets/logo.png')
+
+			ul.navigation
+				li= content.menu.one
+				li.dropdown= content.menu.two.title
+					ul.dropdown-content
+						each marka in content.menu.two.dropdown
+							li= marka
+				li= content.menu.three
+				li= content.menu.four
+
+			div.options
+				div.lang= content.lang[0]
+					i.fa.fa-caret-down
+				img.logout(src='views/assets/login.png')
+
+		div.breadcrumbs
+			a(href=routes.news)
+				img(src='views/assets/breadcrumbs.png')
+
+		div.content
+
+			div.content-left
+				h3= content.title
+
+
+				include slider.pug
+					
+
+				h3.underlined= content.contact
+				
+
+				include form.pug
+
+
+			div.content-right
+				div.ad
+					h2= content.ad.title
+					p= content.ad.text
+					div.button= content.ad.buttontext
+						b= 'milano'
+
+	include scripts.pug

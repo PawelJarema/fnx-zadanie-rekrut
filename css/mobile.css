@@ -1,0 +1,179 @@
+@media screen and (max-width: 750px) {
+  body .slider {
+    height: auto;
+  }
+  body .slider .item {
+    overflow: hidden;
+    flex-direction: column;
+  }
+  body .slider .item .slider-img,
+  body .slider .item .no-content {
+    flex: 0 1 300px;
+  }
+  body .slider .item div {
+    height: 100px;
+    flex: 0 1 120px;
+    margin-top: -15px;
+  }
+  body .slider .item div h3 {
+    text-align: center;
+  }
+  body form .col-1 {
+    flex: 0 1 100%;
+  }
+  body form .col-1 button.button {
+    margin: 30px calc(50% - 71px);
+  }
+  body form .col-2 {
+    flex: 0 1 100%;
+  }
+  body .ad {
+    width: calc(100% - 30px);
+  }
+}
+@media screen and (max-width: 650px) {
+  body .slider .item div {
+    flex: 0 1 170px;
+  }
+}
+body {
+  padding-top: 65px;
+  width: calc(100% - 30px);
+  background: #fbfbfb;
+}
+header {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  border-bottom: 1px solid #C9C9C9;
+  padding: 20px;
+  padding-bottom: 27px;
+  width: calc(100% - 40px);
+}
+.hamburger {
+  position: fixed;
+  top: 17px;
+  right: 10px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.hamburger:before {
+  font-family: FontAwesome;
+  font-size: 40px;
+  content: '\f0c9';
+  position: relative;
+  color: #2E2E2E;
+}
+.hamburger.close:before {
+  content: '\f00d';
+}
+.logo {
+  margin-right: 30px;
+}
+.navigation {
+  max-width: 500px;
+  overflow: visible;
+  position: fixed;
+  width: 40%;
+  top: 15px;
+  right: -50%;
+  border-radius: 0;
+  flex-direction: column;
+}
+.navigation li {
+  padding: 15px 20px;
+}
+.navigation li:hover {
+  background-color: #FFD500;
+  color: #2E2E2E;
+}
+.navigation li img.logout {
+  width: 11px;
+  top: 1px;
+  margin-left: 5px;
+}
+.navigation li .dropdown-content {
+  width: calc(100% - 2px);
+  right: 0px;
+  border: 0;
+}
+.navigation li .dropdown-content li:hover {
+  background: #FFE500;
+}
+.navigation .dropdown {
+  width: calc(100% - 40px);
+  overflow: visible;
+}
+.breadcrumbs {
+  color: #666;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: #666;
+}
+.ad {
+  opacity: 0.35;
+  background-position: -750px -415px;
+  height: 180px;
+  max-width: 100%;
+  width: calc(100% - 30px);
+  margin: 30px auto;
+  padding-top: 0px;
+  padding-left: 30px;
+  border: 1px solid #C9C9C9;
+  transition: all 1s ease;
+}
+.ad h2,
+.ad p {
+  margin-bottom: 10px;
+}
+.ad:hover {
+  opacity: 1;
+}
+h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.underlined {
+  border-bottom: 1px solid #C9C9C9;
+}
+.slider {
+  max-width: 100%;
+}
+.slider .item .slider-img {
+  max-width: 100%;
+  max-height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.slider-control {
+  padding: 0;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.slider-control div {
+  width: 50px;
+  margin: auto;
+}
+.slider-control div .left {
+  float: left;
+}
+.slider-control div .right {
+  float: right;
+}
+.slider-control i {
+  font-size: 32px;
+}
+.white {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  margin-left: -15px;
+  margin-bottom: 30px;
+}

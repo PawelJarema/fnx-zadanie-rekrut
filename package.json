@@ -1,0 +1,31 @@
+{
+  "name": "zadanie-rekrut",
+  "version": "1.0.0",
+  "description": "FNX Group - zadanie dla rekruta",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PawelJarema/fnx-zadanie-rekrut.git"
+  },
+  "author": "Pawel Jarema",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PawelJarema/fnx-zadanie-rekrut/issues"
+  },
+  "homepage": "https://github.com/PawelJarema/fnx-zadanie-rekrut#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-express-server": "^0.5.4",
+    "grunt-reload": "^0.2.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "jquery": "^3.3.1",
+    "pug": "^2.0.3"
+  }
+}

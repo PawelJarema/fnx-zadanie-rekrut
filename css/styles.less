@@ -1,0 +1,453 @@
+@import 'variables';
+
+body {
+	font-family: @secondaryfont, sans-serif;
+	max-width: 1200px;
+	padding: 15px;
+	margin: auto;
+}
+
+header {
+	display: flex;
+}
+
+.logo {
+	margin-right: 173px;
+	cursor: pointer;
+}
+
+.navigation {
+	width: 100vw;
+	max-width: 770px;
+
+	list-style: none;
+	overflow: hidden;
+	background-color: @black;
+	border-radius: 7px;
+
+	padding: 0;
+	margin: 0;
+	margin-right: @stdmargin;
+
+	display: flex;
+	
+
+	li {
+		font-family: @primaryfont, sans-serif;
+		border-right: 1px solid @navborder;
+
+		color: @grey;
+		float: left;
+		font-size: 12px;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+
+		padding: 10px 20px;
+		flex: 0 1 25%;
+
+		transition: background-color 0.5s ease;
+		cursor: pointer;
+
+		&:last {
+			border: 0;
+		};
+
+		&:hover {
+			background-color: @highlight;
+		};
+
+		.dropdown-content {
+			list-style: none;
+			display: none;
+			width: 16%;
+			position: absolute;
+
+			padding: 0;
+			margin: 0;
+			margin-top: 10px;
+			margin-left: -20px;
+
+			border: 1px solid @navborder;
+			border-top: 0;
+			z-index: 550;
+
+			background: @highlight;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+			li {
+				width: ~"calc(100% - 20px)";
+				text-align: left;
+				padding-right: 0;
+
+				&:hover {
+					background: @highlight2;
+				};
+			}
+		}
+	}
+
+	.dropdown {
+		margin: 0;
+		overflow: hidden;
+		width: 100%;
+
+		&:hover .dropdown-content {
+			display: block;
+		};
+	}	
+}
+
+
+.breadcrumbs {
+	margin: @stdmargin 0;
+	cursor: pointer;
+}
+
+.options {
+	display: flex;
+
+	.lang {
+		/* mix */
+		font-family: @primaryfont, sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+
+		background-color: @highlight2;
+		color: @grey;
+		padding: 10px 5px;
+		border-radius: 7px;
+
+		max-width: 45px;
+		margin-right: 8px;
+
+		cursor: pointer;
+		.fa {
+			position: relative;
+			top: -2px;
+			margin-left: 1px;
+		}
+
+		&:hover {
+			opacity: 0.5;
+		};
+	}
+
+	.logout {
+		margin-top: 7px;
+		height: 18px;
+		display: inline-block;
+		vertical-align: center;
+
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+		};
+	}
+}
+
+.content {
+	display: flex;
+	color: @black;
+
+	.content-right {
+		flex: 0 1 350px;
+	}
+
+	.content-left {
+		padding-right: @stdmargin;
+		width: 100%;
+		flex: 0 1 ~"calc(100% - 350px)";
+
+		h3 {
+			font-family: @primaryfont, sans-serif;
+			font-size: 14px;
+			margin-top: 0;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+.ad {
+	font-family: @primaryfont, sans-serif;
+	padding-top: 26px;
+	padding-left: @stdmargin;
+
+	background: url('views/assets/milano.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: -1220px -200px; 
+	overflow: hidden;
+	height: 537px;
+	max-width: 268px;
+
+	h2 {
+		font-size: 30px;
+		font-weight: 700;
+	}
+	h2, p {
+		margin-bottom: 22px;
+		background-color: rgba(0, 0, 0, 0);
+	}
+}	
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	label {
+		text-transform: capitalize;
+		vertical-align: center;
+
+		&:first-child {
+			font-weight: bold;
+			font-size: 12px;
+			margin: 10px 0;
+
+			display: block;
+			width: 100%;
+		};
+		
+		span.label {
+			position: relative;
+			top: -11px;
+
+			font-size: 11px;
+			line-height: 0;
+		}	
+	}
+
+	input {
+		height: @stdmargin;
+		border: 1px solid @underline;
+		padding: 10px 15px;
+	}
+
+	textarea {
+		border: 1px solid @underline;
+		padding: 10px 15px;
+		height: 85px;
+		resize: none;
+	}
+
+	input, select, textarea {
+		display: block;
+		width: 100%;
+	}
+
+	div {
+		width: 100%;
+		margin-right: @stdmargin;
+
+		&:last{
+			margin: 0;
+		};
+	}
+
+	/* stylowanie elementów -> https://cloudfour.com/thinks/styling-form-elements/ */
+	.checkbox input {
+	  position: absolute;
+	  padding: 0;
+	  border: 0;
+	  clip: rect(0 0 0 0);
+	  width: 1px;
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	}
+
+	.checkbox-value {
+	  width: @stdmargin;
+	  height: @stdmargin;
+
+	  display: inline-block;
+	  margin-right: 10px;
+
+	  background: @formElements;
+	  border: 1px solid @underline;
+	}
+
+	input:checked + .checkbox-value {
+	  background-image: url('views/assets/checked.png');
+	  background-size: @stdmargin @stdmargin;
+	}
+
+	.button {
+		background: @black;
+		text-transform: uppercase;
+		color: @grey;
+		transition: all 0.5s ease;
+
+		padding: 10px 60px;
+		margin-top: 50px;
+
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+
+	.col-1 {
+		flex: 0 1 ~"calc(33% - 30px)";
+	}
+
+	.col-2 {
+		flex: 0 1 ~"calc(66% - 30px)";
+	}
+
+	.select {
+	  position: relative;
+	}
+
+	.select select {
+	  cursor: pointer;
+	  display: block;
+	  width: 100%;
+	}
+	
+	.select select {
+	  left: 0;
+	  height: 100%;
+	  min-height: 100%;
+	  min-width: 100%;
+	  opacity: 0;
+	  position: absolute;
+	  top: 0;
+	}
+
+	.select-value {
+		display: block;
+		max-height: @stdmargin;
+		max-width: 100%;
+		
+		font-size: 11px;
+		padding: 7px 15px;
+
+		border: 1px solid @underline;
+		background: @formElements;
+
+		&:after {
+			font-family: FontAwesome;
+			font-size: 20px;
+			content: "\f0d7";
+
+			margin-top: -3px;
+			float: right;
+			color: #999;
+		} 
+	}
+}
+
+
+
+.slider {
+	max-width: 700px;
+	height: 200px;
+	background-color: rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+
+	margin-bottom: @stdmargin;
+
+	display: flex;
+	flex-wrap: nowrap;
+
+	.item {
+
+		overflow: hidden;
+		flex: 0 1 0px;
+
+		&:first-child {
+			flex: 0 1 100%;
+		};
+
+		position: relative;
+		display: flex;
+
+		.no-content {
+			background: @grey;
+			max-height: 200px;
+			margin-right: @stdmargin;
+			flex: 0 1 270px;
+		}
+
+		.slider-img {
+			max-width: 270px;
+			max-height: 200px;
+
+			background-image: url('views/assets/aktualnosci1.png');
+			background-position: -55px -30px;
+
+			margin-right: @stdmargin;
+			flex: 0 1 270px;
+		}
+
+		div {
+			width: 100%;
+			flex: 0 1 ~"calc(100% - 270px)";
+
+			h3 {
+				margin-top: @stdmargin;
+				font-family: @primaryfont, sans-serif;
+				font-size: 17px;
+				font-weight: 400;
+				line-height: 1.35;
+				margin-bottom: 0;
+			}
+
+			p {
+				margin-top: 5px;
+				font-size: 12px;
+				line-height: 1.6;
+				&:after {
+					content: url('views/assets/arrow.png');
+					position: relative;
+					left: 5px;
+				};
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		};
+	}
+}
+
+.slider-control {
+	height: @stdmargin;
+	padding-right: 20%; 
+
+	i {
+		margin: 5px;
+		float: right;
+		
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.6;
+		};
+	}
+}
+
+.underlined {
+	border-bottom: 1px solid @underline;
+}
+
+.button {
+	border-radius: 7px;
+	padding: 10px 20px;
+	max-width: 170px;
+	font-size: 14px;
+	text-align: center;
+	background: @yellow;
+
+	transition: background-color 0.5s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: @lightyellow;
+	};
+}

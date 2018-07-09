@@ -1,0 +1,58 @@
+html
+	head
+		style
+			include ../css/styles.css
+			include ../css/mobile.css
+
+		include links.pug
+
+		title= content.site
+
+	body
+		header
+			span.logo
+				a(href=routes.root)
+					img(src='views/assets/logo.png')
+			div.hamburger
+			ul.navigation
+				li= content.menu.one
+				li.dropdown= content.menu.two.title
+					ul.dropdown-content
+						each marka in content.menu.two.dropdown
+							li= marka
+				li= content.menu.three
+				li= content.menu.four
+				li= 'wyloguj'
+					img.logout(src='views/assets/login.png')
+				li= content.lang[0] 
+					i.fa.fa-caret-down
+
+		div.breadcrumbs
+			a(href=routes.mobile)
+				='Domax' 
+			span= ' > ' 
+			a(href=routes.mobile)
+				='aktualności'
+
+		div
+			h3= content.title
+
+
+		include slider.pug
+
+
+		div
+			h3.underlined= content.contact
+
+
+			include form.pug
+
+
+		div.ad
+			h2= content.ad.title
+			p= content.ad.text
+			div.button= content.ad.buttontext
+				b= 'milano'
+
+
+	include scripts.pug

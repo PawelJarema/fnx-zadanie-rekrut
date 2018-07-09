@@ -1,0 +1,362 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  max-width: 1200px;
+  padding: 15px;
+  margin: auto;
+}
+header {
+  display: flex;
+}
+.logo {
+  margin-right: 173px;
+  cursor: pointer;
+}
+.navigation {
+  width: 100vw;
+  max-width: 770px;
+  list-style: none;
+  overflow: hidden;
+  background-color: #2E2E2E;
+  border-radius: 7px;
+  padding: 0;
+  margin: 0;
+  margin-right: 30px;
+  display: flex;
+}
+.navigation li {
+  font-family: 'Titillium Web', sans-serif;
+  border-right: 1px solid #585858;
+  color: #EEE;
+  float: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  flex: 0 1 25%;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+.navigation li:last {
+  border: 0;
+}
+.navigation li:hover {
+  background-color: #3F3F3F;
+}
+.navigation li .dropdown-content {
+  list-style: none;
+  display: none;
+  width: 16%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: -20px;
+  border: 1px solid #585858;
+  border-top: 0;
+  z-index: 550;
+  background: #3F3F3F;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.navigation li .dropdown-content li {
+  width: calc(100% - 20px);
+  text-align: left;
+  padding-right: 0;
+}
+.navigation li .dropdown-content li:hover {
+  background: #666;
+}
+.navigation .dropdown {
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.navigation .dropdown:hover .dropdown-content {
+  display: block;
+}
+.breadcrumbs {
+  margin: 30px 0;
+  cursor: pointer;
+}
+.options {
+  display: flex;
+}
+.options .lang {
+  /* mix */
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #666;
+  color: #EEE;
+  padding: 10px 5px;
+  border-radius: 7px;
+  max-width: 45px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.options .lang .fa {
+  position: relative;
+  top: -2px;
+  margin-left: 1px;
+}
+.options .lang:hover {
+  opacity: 0.5;
+}
+.options .logout {
+  margin-top: 7px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: center;
+  cursor: pointer;
+}
+.options .logout:hover {
+  opacity: 0.5;
+}
+.content {
+  display: flex;
+  color: #2E2E2E;
+}
+.content .content-right {
+  flex: 0 1 350px;
+}
+.content .content-left {
+  padding-right: 30px;
+  width: 100%;
+  flex: 0 1 calc(100% - 350px);
+}
+.content .content-left h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px;
+  margin-top: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ad {
+  font-family: 'Titillium Web', sans-serif;
+  padding-top: 26px;
+  padding-left: 30px;
+  background: url('views/assets/milano.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: -1220px -200px;
+  overflow: hidden;
+  height: 537px;
+  max-width: 268px;
+}
+.ad h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.ad h2,
+.ad p {
+  margin-bottom: 22px;
+  background-color: rgba(0, 0, 0, 0);
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* stylowanie elementów -> https://cloudfour.com/thinks/styling-form-elements/ */
+}
+form label {
+  text-transform: capitalize;
+  vertical-align: center;
+}
+form label:first-child {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+}
+form label span.label {
+  position: relative;
+  top: -11px;
+  font-size: 11px;
+  line-height: 0;
+}
+form input {
+  height: 30px;
+  border: 1px solid #C9C9C9;
+  padding: 10px 15px;
+}
+form textarea {
+  border: 1px solid #C9C9C9;
+  padding: 10px 15px;
+  height: 85px;
+  resize: none;
+}
+form input,
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+}
+form div {
+  width: 100%;
+  margin-right: 30px;
+}
+form div:last {
+  margin: 0;
+}
+form .checkbox input {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+form .checkbox-value {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  background: #F2F2F2;
+  border: 1px solid #C9C9C9;
+}
+form input:checked + .checkbox-value {
+  background-image: url('views/assets/checked.png');
+  background-size: 30px 30px;
+}
+form .button {
+  background: #2E2E2E;
+  text-transform: uppercase;
+  color: #EEE;
+  transition: all 0.5s ease;
+  padding: 10px 60px;
+  margin-top: 50px;
+}
+form .button:hover {
+  opacity: 0.85;
+}
+form .col-1 {
+  flex: 0 1 calc(33% - 30px);
+}
+form .col-2 {
+  flex: 0 1 calc(66% - 30px);
+}
+form .select {
+  position: relative;
+}
+form .select select {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+form .select select {
+  left: 0;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+form .select-value {
+  display: block;
+  max-height: 30px;
+  max-width: 100%;
+  font-size: 11px;
+  padding: 7px 15px;
+  border: 1px solid #C9C9C9;
+  background: #F2F2F2;
+}
+form .select-value:after {
+  font-family: FontAwesome;
+  font-size: 20px;
+  content: "\f0d7";
+  margin-top: -3px;
+  float: right;
+  color: #999;
+}
+.slider {
+  max-width: 700px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.slider .item {
+  overflow: hidden;
+  flex: 0 1 0px;
+  position: relative;
+  display: flex;
+}
+.slider .item:first-child {
+  flex: 0 1 100%;
+}
+.slider .item .no-content {
+  background: #EEE;
+  max-height: 200px;
+  margin-right: 30px;
+  flex: 0 1 270px;
+}
+.slider .item .slider-img {
+  max-width: 270px;
+  max-height: 200px;
+  background-image: url('views/assets/aktualnosci1.png');
+  background-position: -55px -30px;
+  margin-right: 30px;
+  flex: 0 1 270px;
+}
+.slider .item div {
+  width: 100%;
+  flex: 0 1 calc(100% - 270px);
+}
+.slider .item div h3 {
+  margin-top: 30px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: 0;
+}
+.slider .item div p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.slider .item div p:after {
+  content: url('views/assets/arrow.png');
+  position: relative;
+  left: 5px;
+}
+.slider .item:hover {
+  cursor: pointer;
+}
+.slider-control {
+  height: 30px;
+  padding-right: 20%;
+}
+.slider-control i {
+  margin: 5px;
+  float: right;
+  cursor: pointer;
+}
+.slider-control i:hover {
+  opacity: 0.6;
+}
+.underlined {
+  border-bottom: 1px solid #C9C9C9;
+}
+.button {
+  border-radius: 7px;
+  padding: 10px 20px;
+  max-width: 170px;
+  font-size: 14px;
+  text-align: center;
+  background: #FFD500;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #FFE500;
+}
