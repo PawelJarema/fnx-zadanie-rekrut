@@ -32,7 +32,7 @@ var content = {
 		dept: 'wybierz dział',
 		copy: 'kopia wiadomosci',
 		text: 'treść',
-		send: 'wyslij'
+		send: 'wyślij'
 	},
 	accept: 'Akceptuję regulamin',
 	ad: {

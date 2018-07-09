@@ -232,6 +232,7 @@ form .button {
   margin-top: 50px;
 }
 form .button:hover {
+  background: #2E2E2E;
   opacity: 0.85;
 }
 form .col-1 {
